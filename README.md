@@ -31,10 +31,10 @@
 
 ```Objective-C
 
-    [self.p zl_addObserver:self forKeyPath:@"name" withBlock:^(id observer, NSString *keyPath, id oldValue, id newValue) {
-        NSLog(@"oldname=%@---newname=%@",oldValue,newValue);
-    }];
+[self.p zl_addObserver:self forKeyPath:@"name" withBlock:^(id observer, NSString *keyPath, id oldValue, id newValue) {
+    NSLog(@"oldname=%@---newname=%@",oldValue,newValue);
+}];
     
 ```
 
-这样既可监听name的值，并且实现了自动销毁，不需要调用系统的移除观察者的方法。极大的简化了KVO的步骤和代码量！
+这样就可以监听name的值，并且实现了自动销毁，不需要调用系统的移除观察者的方法。极大的简化了KVO的步骤和代码量！
